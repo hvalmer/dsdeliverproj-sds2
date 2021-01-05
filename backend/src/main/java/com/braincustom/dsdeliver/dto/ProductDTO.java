@@ -24,6 +24,7 @@ public class ProductDTO implements Serializable {
 		this.imageUri = imageUri;
 	}
 	
+	//construtor que transforma a entidade(entity) para DTO
 	public ProductDTO(Product entity) {
 		id = entity.getId();
 		name = entity.getName();
