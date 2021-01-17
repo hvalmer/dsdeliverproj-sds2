@@ -1,15 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import Header from '../Header';
 
 function Home() {
+  const navigation = useNavigation();
 
   const handlerOnPress = () => {
-
+    navigation.navigate('Orders');
   }
 
   return (
     <>
+      <Header/>
       <View style={styles.container}>
        <Image source={require('../assets/deliveryman.png')}/>
         <Text style={styles.title}>
@@ -24,7 +28,6 @@ function Home() {
           <Text style={styles.buttonText}>VER PEDIDOS</Text>
         </RectButton>
       </View>
-
     </>
   );
 }
